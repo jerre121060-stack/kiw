@@ -1,0 +1,38 @@
+-- ตรวจสอบและโหลด Rayfield UI Library
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- สร้างหน้าต่างหลัก (Window) ธีมสีแดง
+local Window = Rayfield:CreateWindow({
+   Name = "KIW boxz",
+   LoadingTitle = "KIW boxz Interface",
+   LoadingSubtitle = "by Developer",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = "KIWboxzConfig",
+      FileName = "Config"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvite",
+      RememberJoins = true
+   },
+   KeySystem = false, -- ปิดระบบคีย์
+   KeySettings = {
+      Title = "KIW boxz",
+      Subtitle = "Key System",
+      Note = "No key required",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"12345"}
+   }
+})
+
+-- สร้างแท็บต่างๆ
+local MainTab = Window:CreateTab("Aimbot", "crosshair")
+local VisualTab = Window:CreateTab("Visuals", "eye")
+local MiscTab = Window:CreateTab("Misc", "settings")
+
+-- ตัวแปรควบคุมสถานะฟังก์ชัน
+local AimbotEnabled = false
+lo
